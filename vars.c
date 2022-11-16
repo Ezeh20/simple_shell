@@ -1,6 +1,4 @@
-
 #include "shell.h"
-
 
 /**
  * is_chain - test if current char in buffer is a chain delimeter
@@ -14,6 +12,7 @@
 int is_chain(info_t *info, char *buf, size_t *p)
 {
 	size_t j = *p;
+
 	if (buf[j] == '|' && buf[j + 1] == '|')
 	{
 		buf[j] = 0;
@@ -27,7 +26,7 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		info->cmd_buf_type = CMD_AND;
 
 	}
-	else if (buf[j] == ';') 
+	else if (buf[j] == ';')
 	{
 		buf[j] = 0;
 		info->cmd_buf_type = CMD_CHAIN;
@@ -77,7 +76,6 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 
 
 /**
- *
  * replace_alias - replaces an aliases in the tokenized string
  * @info: the parameter struct
  *
