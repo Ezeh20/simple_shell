@@ -1,7 +1,5 @@
 #include "shell.h"
 
-
-
 /**
  * _strcpy - copies a string
  * @dest: the destination
@@ -58,10 +56,10 @@ char *_strdup(const char *str)
  * Return: Nothing
  */
 
-
 void _puts(char *str)
 {
 	int i = 0;
+
 	if (!str)
 		return;
 	while (str[i] != '\0')
@@ -70,7 +68,6 @@ void _puts(char *str)
 		i++;
 	}
 }
-
 
 /**
  * _putchar - writes the character c to stdout
